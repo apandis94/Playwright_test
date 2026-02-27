@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "ignoreDeprecations": "6.0"
+  },
+  "include": [
+    "pages/**/*.ts",
+    "features/**/*.feature",
+    "pages/testdata/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

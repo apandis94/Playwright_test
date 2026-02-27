@@ -1,0 +1,6 @@
+{
+  "cucumber.glue": [
+    "steps/**/*.ts",
+    "step_definitions/**/*.ts"
+  ]
+}
