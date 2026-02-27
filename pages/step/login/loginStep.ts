@@ -64,6 +64,8 @@ export class LoginStep {
       await loginPage.otpinput.fill(kodeOTP);
       await loginPage.otpverifybutton.click();
       await loginPage.buttonloginsuccestmfa.click();
+      await loginPage.successlogintrac1.waitFor({ state: 'visible' });    
+      await loginPage.successlogintrac2.waitFor({ state: 'visible' });
       // ------------------------------------------ Save cookie -----------------------------------------//
       const statePath = path.join(__dirname, 'tracLogin/loginState.json');
       await this.page.context().storageState({ path: statePath });
