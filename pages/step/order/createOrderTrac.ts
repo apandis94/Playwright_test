@@ -22,16 +22,13 @@ export class orderStep {
 
   async inputdatacustomer() {
     await this.orderLocator.customername.fill('BANK CENTRAL ASIA, TBK');
-    await this.page.waitForTimeout(3000);
     await this.page.locator('.ant-select-item-option-content').filter({ hasText: 'BANK CENTRAL ASIA, TBK' }).click();
   }
 
   async inputdatacontract() {
     await this.orderLocator.contractnumber.fill('2100001864');
     await this.page.locator('.ant-select-item-option-content').filter({ hasText: '2100001864' }).click();
-    await this.page.waitForTimeout(3000);
     await this.orderLocator.buttonnextpage.click();
-    await this.page.waitForTimeout(3000);
   }
 
   async inputdataordertype() {
