@@ -21,7 +21,7 @@ Feature: Add New External Vehicle
       # And I login to FMS
       And I close browser
 
-  # Scenario: As a user. i want visit web without login
+  # Scenario: As a user. i want visit web without login and userd cookies browser
   #   Given Open browser fms trac rental
   #   When Set to dashboard trac web
   #   Then I navigate to menu create order
