@@ -1,4 +1,4 @@
 export const userData = {
     username1:  'Apandi Saputra',
-    email1:     'asa90001421@trac.astra.co.id',
+    email1:     'apandi.saputra94@gmail.com',
 };
