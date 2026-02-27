@@ -39,7 +39,7 @@ export class LoginStep {
     const loginPage = new LoginPage(this.page);
     const loginData = getLoginData(rowIndex) as LoginData;
     if (!loginData?.username || !loginData?.password) {
-      throw new Error(`❌ Invalid login data at Excel row ${rowIndex + 2}`);
+      throw new Error(`Invalid login data at Excel row ${rowIndex + 2}`);
     }
     if (loginData.login_type === 'MFA') {
       await loginPage.mfatracloginbutton.waitFor({ state: 'visible' });
