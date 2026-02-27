@@ -27,24 +27,21 @@ export class searchingData {
             `xpath=//div[@class="ant-select-item-option-content"][contains(.,'${testContext.buGlobal}')]`
           )
           .click();
-        await this.page.waitForTimeout(3000);
   
         await this.vehicleLocator.searchinglicensplate.fill(testContext.dataGLobal);
-        await this.page.waitForTimeout(2000); 
         // await this.vehicleLocator.buttonsearchvehicle.click();
         await this.page.keyboard.press('Enter');
-        await this.page.waitForTimeout(2000);
   
         const isFound = await this.vehicleLocator.tablelistvehicle
           .filter({ hasText: testContext.dataGLobal })
           .isVisible();
   
         if (isFound) {
-          console.log(`✅ Vehicle found on attempt ${attempt}`);
+          console.log(`Vehicle found on attempt ${attempt}`);
           return;
         }
   
-        console.log(`❌ Vehicle not found, retrying...`);
+        console.log(`Vehicle not found, retrying...`);
       }
   
       throw new Error(
